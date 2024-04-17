@@ -1,13 +1,14 @@
-# PCA trading strategy
+# PCA Trading Strategy
 
-This project is part of the assessment of MATH70121 - Topics in Derivative Pricing 2023-2024. The material is based on materials covered in lecture notes include not limited to **Topic 4: Building Libor/OIS Rate Curves**, **Topic 8: Measuring the Value in IR Instruments**, **Topic 10: Static Curve RV**. In this project, we first obtain the GBP OIS data across different tenors between 2022 and 2024, build curves for each day using various interpolaion scheme, and perform PCA on the first 6 months of curve changes. We then construct a butterfly trade based on the curvature that is immune to both level and slope, and investigate the PnL time series. Special thanks to [FinancePy](https://github.com/piterbarg/FinancePy) for providing various functionalities needed for this project. 
+This project forms the assessment for MATH70121 - Topics in Derivative Pricing 2023-2024. The content draws from lecture notes, including but not limited to **Topic 4: Building Libor/OIS Rate Curves**, **Topic 8: Measuring the Value in IR Instruments**, and **Topic 10: Static Curve RV**. Within this project, we initially gather GBP OIS data across various tenors from 2022 to 2024, construct daily curves using different interpolation schemes, and conduct PCA on the initial 6 months of curve changes. Subsequently, we devise a butterfly trade grounded in curvature, which remains unaffected by both level and slope, and scrutinize the PnL time series. We extend our gratitude to [FinancePy](https://github.com/piterbarg/FinancePy) for providing the essential functionalities for this project.
+
 ## Overview
-- `Curve_Building_Libor.ipynb`: This file first convert Bloomberg data to benchmark tenors for each day, then interpolate the curve based on benchmark instruments with various scheme. Finally it stored in the fitted curve for every day in the dictionary `curves.pkl` and the interpolated swap yield across different tenors fir every day in `df_yield.pkl`.
-- `PCA_Trade_Libor_5s10s20s_changes.ipynb`: This file contains implementation of below:
-    - Perform PCA on first 6m of the data on changes in yield, and explore correlation among the first three principle components against level, slope, curvature across different tenors
-    - Construct a butterfly trade using 5s10s20s spot IborSwap.
-    - Calculate daily PnL and investigate it's relationship with the principle components post trade.
-- `gbp_ois_data_cw.xlsx`: Raw Excel data of GBP OIS between 2022 and 2024.
+- `Curve_Building_Libor.ipynb`: This notebook converts Bloomberg data to benchmark tenors daily, performs curve interpolation based on benchmark instruments employing various schemes, and stores the fitted curve for each day in the `curves.pkl` dictionary. Additionally, it saves the interpolated swap yield across different tenors for each day in `df_yield.pkl`.
+- `PCA_Trade_Libor_5s10s20s_changes.ipynb`: This notebook encompasses the following implementations:
+    - PCA analysis on the first 6 months of yield changes data, exploring correlations among the first three principal components concerning level, slope, and curvature across diverse tenors.
+    - Development of a butterfly trade utilizing 5s10s20s spot IborSwap.
+    - Calculation of daily PnL and examination of its relationship with the principal components post-trade.
+- `gbp_ois_data_cw.xlsx`: Raw Excel data of GBP OIS spanning from 2022 to 2024.
 
 ## Contributors
 - Ethan Qizhe Cui (CID: 01954652)
