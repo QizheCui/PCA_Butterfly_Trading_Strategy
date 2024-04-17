@@ -6,7 +6,7 @@ This project forms the assessment for MATH70121 - Topics in Derivative Pricing 2
 - `Curve_Building_Libor.ipynb`: This notebook converts Bloomberg data to benchmark tenors daily, performs curve interpolation based on benchmark instruments employing various schemes, and stores the fitted curve for each day in the `curves.pkl` dictionary. Additionally, it saves the interpolated swap yield across different tenors for each day in `df_yield.pkl`.
 - `PCA_Trade_Libor_5s10s20s_changes.ipynb`: This notebook encompasses the following implementations:
     - PCA analysis on the first 6 months of yield changes data, exploring correlations among the first three principal components concerning level, slope, and curvature across diverse tenors.
-    - Development of a butterfly trade utilizing 5s10s20s spot IborSwap.
+    - Construct of a butterfly trade utilizing 5s10s20s spot IborSwap, then calcualte DV01, carry&rolls.
     - Calculation of daily PnL and examination of its relationship with the principal components post-trade.
 - `gbp_ois_data_cw.xlsx`: Raw Excel data of GBP OIS spanning from 2022 to 2024.
 
