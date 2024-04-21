@@ -29,6 +29,7 @@ After completing these steps, you can import FinancePy as a module for this cour
     - PCA analysis on the first 6 months of yield changes data, exploring correlations among the first three principal components concerning level, slope, and curvature across diverse tenors.
     - Construct of a butterfly trade utilizing 5s10s20s spot IborSwap, then calcualte DV01, carry&rolls.
     - Calculation of daily PnL and examination of its relationship with the principal components post-trade.
+- `Interp_PCA_plts.ipynb`: This short notebook includes the plots of comparisons of two ways of interpolation of zero rates and log discount rates; and the plots of correlation heatmaps of rate levels and changes. Those two plots help illustrate why we ended up using log discount rates interpolation and PCA on rate changes.
 - `gbp_ois_data_cw.xlsx`: Raw Excel data of GBP OIS spanning from 2022 to 2024.
 
 
